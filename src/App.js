@@ -1,3 +1,4 @@
+
 import "./App.css";
 
 export default function App() {
@@ -36,7 +37,7 @@ export default function App() {
 
       {/* ABOUT */}
       <section className="about">
-        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" />
+        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Construction site overview" />
         <div>
           <h2>Trusted NA Construction Partner</h2>
           <p>We provide reliable building, road and JCB construction services.</p>
@@ -49,39 +50,38 @@ export default function App() {
         </div>
       </section>
       
-
       {/* SERVICES */}
       <section className="services">
         <h2>Our NA Construction Services</h2>
 
         <div className="service-grid">
           <div className="service">
-            <img src="https://t3.ftcdn.net/jpg/16/34/34/16/360_F_1634341673_aY37OBTX8AWoOHFQEhy3EI1eBj1MeNO0.jpg" />
+            <img src="https://t3.ftcdn.net/jpg/16/34/34/16/360_F_1634341673_aY37OBTX8AWoOHFQEhy3EI1eBj1MeNO0.jpg" alt="JCB Excavation work" />
             <h4>JCB Excavation</h4>
           </div>
 
           <div className="service">
-            <img src="https://t3.ftcdn.net/jpg/09/89/25/14/360_F_989251404_aqQRi6zrKX30s3M69ZecK5sKKZKimiEn.jpg" />
+            <img src="https://t3.ftcdn.net/jpg/09/89/25/14/360_F_989251404_aqQRi6zrKX30s3M69ZecK5sKKZKimiEn.jpg" alt="Road Construction" />
             <h4>Road Construction</h4>
           </div>
 
           <div className="service">
-            <img src="https://as2.ftcdn.net/v2/jpg/02/92/28/03/1000_F_292280346_jhRZyIQx3aWllg5CGeRZPSKRKkZBe1ND.jpg" />
+            <img src="https://as2.ftcdn.net/v2/jpg/02/92/28/03/1000_F_292280346_jhRZyIQx3aWllg5CGeRZPSKRKkZBe1ND.jpg" alt="Building Construction" />
             <h4>Building Construction</h4>
           </div>
 
           <div className="service">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" />
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="Commercial Project Site" />
             <h4>Commercial Projects</h4>
           </div>
 
           <div className="service">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd" />
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd" alt="Site Development" />
             <h4>Site Development</h4>
           </div>
 
           <div className="service">
-            <img src="https://img.freepik.com/free-photo/heavy-machinery-used-construction-industry-engineering_23-2151307734.jpg?semt=ais_hybrid&w=740&q=80" />
+            <img src="https://img.freepik.com/free-photo/heavy-machinery-used-construction-industry-engineering_23-2151307734.jpg?semt=ais_hybrid&w=740&q=80" alt="Heavy Machinery Work" />
             <h4>Heavy Machinery Work</h4>
           </div>
         </div>
