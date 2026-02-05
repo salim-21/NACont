@@ -1,38 +1,132 @@
-/* /* Reset & Base */
+/* *{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI;}
+body{background:#f7f9fb}
+
+.navbar{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:18px 60px;background:#0f2d24;color:#fff;
+}
+.navbar ul{display:flex;gap:20px;list-style:none}
+
+.btn{
+  background:#7dff44;border:none;padding:12px 22px;
+  border-radius:6px;font-weight:600;cursor:pointer;
+}
+
+.btn.outline{
+  background:transparent;border:1px solid #7dff44;color:#7dff44;
+} */
+
+.hero{
+  height:85vh;
+  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+  url("https://images.unsplash.com/photo-1504307651254-35680f356dfd");
+  background-size:cover;background-position:center;
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;color:#fff;
+}
+
+.hero h1{font-size:52px}
+.hero p{margin:15px 0}
+
+.features{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:20px;padding:60px;
+}
+
+.card{
+  background:#fff;padding:25px;
+  border-radius:14px;text-align:center;
+  box-shadow:0 6px 15px rgba(0,0,0,.08);
+  font-weight:600;
+}
+
+.about{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:50px;padding:80px;
+}
+
+.about img{width:100%;border-radius:18px}
+
+.services{padding:80px;text-align:center}
+.service-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:30px;margin-top:40px;
+}
+
+.service{
+  background:#fff;border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,.1);
+}
+
+.service img{
+  width:100%;height:230px;object-fit:cover;
+}
+
+.service h4{padding:18px}
+
+.contact{
+  background:#0f2d24;color:#fff;
+  padding:80px;text-align:center;
+}
+
+.contact form{
+  max-width:500px;margin:auto;
+  display:flex;flex-direction:column;gap:15px;
+}
+
+.contact input,.contact textarea{
+  padding:12px;border-radius:6px;
+  border:none;outline:none;font-size:16px;
+}
+
+.contact textarea{height:120px}
+
+footer{
+  background:#000;color:#aaa;
+  text-align:center;padding:20px;
+}
+
+@media(max-width:900px){
+  .features,.about,.service-grid{grid-template-columns:1fr}
+  .hero h1{font-size:38px}
+}
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-  background: #f7f9fb;
-  color: #222;
-  line-height: 1.6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 60px;
   background: #0f2d24;
-  color: #fff;
+  color: white;
 }
 
-.navbar ul {
+.navbar h2 {
+  font-size: 24px;
+}
+
+.nav-list {
   display: flex;
-  gap: 24px;
+  gap: 20px;
   list-style: none;
 }
 
-.navbar li {
+.nav-list li {
   cursor: pointer;
 }
 
-/* Buttons */
+/* Button Styles */
 .btn {
   background: #7dff44;
   border: none;
@@ -40,12 +134,6 @@ body {
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
 }
 
 .btn.outline {
@@ -54,161 +142,56 @@ body {
   color: #7dff44;
 }
 
-/* Hero Section */
-.hero {
-  min-height: 85vh;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://images.unsplash.com/photo-1504307651254-35680f356dfd");
-  background-size: cover;
-  background-position: center;
-  display: flex;
+/* Hamburger Menu (Mobile) */
+.hamburger {
+  display: none;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: #fff;
-  padding: 20px;
+  gap: 4px;
+  cursor: pointer;
 }
 
-.hero h1 {
-  font-size: 52px;
-  max-width: 800px;
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
 }
 
-.hero p {
-  margin: 15px 0 25px;
-  max-width: 600px;
-}
-
-/* Features */
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  padding: 60px;
-}
-
-.card {
-  background: #fff;
-  padding: 28px;
-  border-radius: 14px;
-  text-align: center;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-/* About Section */
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-  padding: 80px;
-  align-items: center;
-}
-
-.about img {
-  width: 100%;
-  border-radius: 18px;
-}
-
-/* Services */
-.services {
-  padding: 80px;
-  text-align: center;
-}
-
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.service {
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease;
-}
-
-.service:hover {
-  transform: translateY(-5px);
-}
-
-.service img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
-}
-
-.service h4 {
-  padding: 18px;
-}
-
-/* Contact */
-.contact {
-  background: #0f2d24;
-  color: #fff;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact input,
-.contact textarea {
-  padding: 12px;
-  border-radius: 6px;
-  border: none;
-  outline: none;
-  font-size: 16px;
-}
-
-.contact textarea {
-  height: 120px;
-  resize: none;
-}
-
-/* Footer */
-footer {
-  background: #000;
-  color: #aaa;
-  text-align: center;
-  padding: 20px;
-}
-
-/* Responsive */
+/* Media Queries */
 @media (max-width: 900px) {
-  .features,
-  .about,
-  .service-grid {
-    grid-template-columns: 1fr;
+  /* Hide the nav list on mobile */
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #0f2d24;
+    padding: 20px;
+  }
+  .btn {
+  background: #5dff44;
+  border: none;
+  padding: 5px 8px; /* Chhota padding */
+  border-radius: 4px; /* Thoda chhota border-radius */
+  font-weight: 550; /* Thoda halka font-weight */
+  font-size: 14px; /* Chhota font size */
+  cursor: pointer;}
+
+  .nav-list li {
+    text-align: center;
+    font-size: 18px;
   }
 
-  .navbar {
-    padding: 16px 30px;
+  /* Show hamburger icon on mobile */
+  .hamburger {
+    display: flex;
   }
 
-  .hero h1 {
-    font-size: 38px;
-  }
-
-  .about,
-  .services {
-    padding: 50px 25px;
+  /* Show the dropdown menu when active */
+  .nav-list.active {
+    display: flex;
   }
 }
