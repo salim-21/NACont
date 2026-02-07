@@ -128,10 +128,10 @@ export default function App() {
     e.preventDefault();
 
     emailjs.sendForm(
-      "service_abc123",  // Your Service ID (replace with actual)
-      "template_xyz456", // Your Template ID (replace with actual)
+      "service_9hukuio",  // Your Service ID (replace with actual)
+      "template_esxlual", // Your Template ID (replace with actual)
       e.target,           // The form data
-      "user_abc123xyz"    // Your Public Key (replace with actual)
+      "_ssnCmDJ0nIKu8XJ7"    // Your Public Key (replace with actual)
     )
     .then((result) => {
       console.log(result.text);  // Success message
@@ -241,10 +241,10 @@ export default function App() {
         <h2>Book Now / Contact Us</h2>
 
         <form onSubmit={sendEmail}>
-          <input type="text" name="name" placeholder="Full Name" required />
-          <input type="email" name="email" placeholder="Email Address" required />
-          <input type="text" name="phone" placeholder="Mobile Number" required />
-          <textarea name="message" placeholder="Project Details" required></textarea>
+          <input type="text" name="name" placeholder="name" required />
+          <input type="email" name="email" placeholder="email" required />
+          <input type="text" name="phone" placeholder="number" required />
+          <textarea name="message" placeholder="project_details" required></textarea>
           <button className="btn">Send Message</button>
         </form>
       </section>
